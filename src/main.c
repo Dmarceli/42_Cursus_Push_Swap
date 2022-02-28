@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
 	if (ft_argcheck(argc, argv) != 1)
 	{
-		write (1 ,"Error\n", 7);
+		write (1 ,"\e[0;31mError\n\e[0;30m", 15);
 		return (0);
 	}
 	while (i < argc - 1)
@@ -25,10 +25,16 @@ int main(int argc, char **argv)
 	printf("%d    %d\n", data.stack_a[0], data.stack_b[0]);
 	printf("%d    %d\n", data.stack_a[1], data.stack_b[1]);
 	printf("%d    %d\n", data.stack_a[2], data.stack_b[2]);
-	org3dig(data);
+	printf("%d    %d\n", data.stack_a[3], data.stack_b[3]);
+	printf("%d    %d\n", data.stack_a[4], data.stack_b[4]);
+	//org3dig(data);
+	pb(&data);
+	pb(&data);
 	printf("%d    %d\n", data.stack_a[0], data.stack_b[0]);
 	printf("%d    %d\n", data.stack_a[1], data.stack_b[1]);
 	printf("%d    %d\n", data.stack_a[2], data.stack_b[2]);
+	printf("%d    %d\n", data.stack_a[3], data.stack_b[3]);
+	printf("%d    %d\n", data.stack_a[4], data.stack_b[4]);
 
 }
 
