@@ -22,19 +22,25 @@ int main(int argc, char **argv)
 		data.stack_a[i] = ft_atol(argv[i + 1]);
 		i++;
 	}
-	printf("%d    %d\n", data.stack_a[0], data.stack_b[0]);
-	printf("%d    %d\n", data.stack_a[1], data.stack_b[1]);
-	printf("%d    %d\n", data.stack_a[2], data.stack_b[2]);
-	printf("%d    %d\n", data.stack_a[3], data.stack_b[3]);
 	printf("%d    %d\n", data.stack_a[4], data.stack_b[4]);
+	printf("%d    %d\n", data.stack_a[3], data.stack_b[3]);
+	printf("%d    %d\n", data.stack_a[2], data.stack_b[2]);
+	printf("%d    %d\n", data.stack_a[1], data.stack_b[1]);
+	printf("%d    %d\n", data.stack_a[0], data.stack_b[0]);
 	//org3dig(data);
 	pb(&data);
 	pb(&data);
-	printf("%d    %d\n", data.stack_a[0], data.stack_b[0]);
-	printf("%d    %d\n", data.stack_a[1], data.stack_b[1]);
-	printf("%d    %d\n", data.stack_a[2], data.stack_b[2]);
-	printf("%d    %d\n", data.stack_a[3], data.stack_b[3]);
+	sa(&data, 1);
+	ra(&data, 1);
+	pa(&data);
+	ra(&data, 1);
+	pa(&data);
+
 	printf("%d    %d\n", data.stack_a[4], data.stack_b[4]);
+	printf("%d    %d\n", data.stack_a[3], data.stack_b[3]);
+	printf("%d    %d\n", data.stack_a[2], data.stack_b[2]);
+	printf("%d    %d\n", data.stack_a[1], data.stack_b[1]);
+	printf("%d    %d\n", data.stack_a[0], data.stack_b[0]);
 
 }
 
