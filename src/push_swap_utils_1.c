@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   org5dig.c                                          :+:      :+:    :+:   */
+/*   push_swap_utils_1.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 13:06:54 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/02 16:29:00 by dmarceli         ###   ########.fr       */
+/*   Created: 2022/03/02 14:19:21 by dmarceli          #+#    #+#             */
+/*   Updated: 2022/03/02 16:29:52 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
-void	org5dig(t_data data)
+int	find_smallest_nbr(t_data *data)
 {
-	while (data.stack_a[data.number_count_a - 1] != find_smallest_nbr(&data))
-		rra(&data, 1);
-	pb(&data);
-	while (data.stack_a[data.number_count_a - 1] != find_smallest_nbr(&data))
-		rra(&data, 1);
-	pb(&data);
-	org3dig(data);
-	pa(&data);
-	pa(&data);
+	int	*tmp;
+	int	length;
+	int	i;
+	int	min;
+
+	min = data->stack_a[0];
+	tmp = data->stack_a;
+	length = data->number_count_a ;
+	i = 0;
+	while (i < length)
+	{
+		if (tmp[i] < min)
+			min = tmp[i];
+		i++;
+	}
+	//printf("Smallest element present in given array: %d\n", min);
+	return (min);
 }
