@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   argparser.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/02 13:07:02 by dmarceli          #+#    #+#             */
+/*   Updated: 2022/03/02 13:18:54 by dmarceli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "../incs/push_swap.h"
 
-int is_intlimits(char **argv)
+int	is_intlimits(char **argv)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (argv[i])
@@ -13,13 +26,13 @@ int is_intlimits(char **argv)
 		}	
 		i++;
 	}
-	return(1);
+	return (1);
 }
 
-int is_numeric(int argc, char **argv)
+int	is_numeric(int argc, char **argv)
 {
-	int i;
-	int k;
+	int	i;
+	int	k;
 
 	i = 1;
 	k = 0;
@@ -41,7 +54,7 @@ int is_numeric(int argc, char **argv)
 
 int	is_duplicate(char **argv)
 {
-	int i;
+	int	i;
 	int	k;
 
 	i = 1;
@@ -53,28 +66,28 @@ int	is_duplicate(char **argv)
 			if (ft_strlen(argv[i]) == ft_strlen(argv[k]))
 			{
 				if (ft_strncmp(argv[i], argv[k], ft_strlen(argv[i])) == 0)
-					return(0);
+					return (0);
 			}
 			k++;
 		}
 		i++;
 	}
-	return(1);
+	return (1);
 }
 
 int	ft_argcheck(int argc, char **argv)
 {
-	int i;
-	i = 1;
+	int	i;
 
+	i = 1;
 	if (argc < 2)
-		return(0);
+		return (0);
 	if (!is_intlimits(argv))
-		return(0);
+		return (0);
 	if (!is_numeric(argc, argv))
-		return(0);
+		return (0);
 	if (!is_duplicate(argv))
-		return(0);
+		return (0);
 	else
-		return(1);	
+		return (1);
 }

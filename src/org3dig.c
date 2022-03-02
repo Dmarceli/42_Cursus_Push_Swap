@@ -1,31 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   org3dig.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/02 13:07:15 by dmarceli          #+#    #+#             */
+/*   Updated: 2022/03/02 13:17:06 by dmarceli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../incs/push_swap.h"
 
-void org3dig(t_data data)
+void	org3dig(t_data data)
 {
-	if(data.stack_a[0] > data.stack_a[1] && data.stack_a[1] < data.stack_a[2] && data.stack_a[2] > data.stack_a[0])
+	if (data.stack_a[0] > data.stack_a[1] && data.stack_a[1] < data.stack_a[2]
+		&& data.stack_a[2] > data.stack_a[0])
 		sa(&data, 1);
-	else if(data.stack_a[0] > data.stack_a[1] && data.stack_a[1] > data.stack_a[2] && data.stack_a[2] < data.stack_a[0])
+	else if (data.stack_a[0] > data.stack_a[1]
+		&& data.stack_a[1] > data.stack_a[2]
+		&& data.stack_a[2] < data.stack_a[0])
 	{
 		sa(&data, 1);
 		rra(&data, 1);
 	}
-	else if(data.stack_a[0] > data.stack_a[1] && data.stack_a[1] < data.stack_a[2] && data.stack_a[2] < data.stack_a[0])
+	else if (data.stack_a[0] > data.stack_a[1]
+		&& data.stack_a[1] < data.stack_a[2]
+		&& data.stack_a[2] < data.stack_a[0])
 		ra(&data, 1);
-	else if(data.stack_a[0] < data.stack_a[1] && data.stack_a[1] > data.stack_a[2] && data.stack_a[2] > data.stack_a[0])
+	else if (data.stack_a[0] < data.stack_a[1]
+		&& data.stack_a[1] > data.stack_a[2]
+		&& data.stack_a[2] > data.stack_a[0])
 	{
 		sa(&data, 1);
 		ra(&data, 1);
 	}
 	else
 		rra(&data, 1);
-}
-void org5dig(t_data data)
-{
-	pb(&data);
-	pb(&data);
-	org3dig(data);
-	pa(&data);
-	ra(&data, 1);
-	pa(&data);
-
 }

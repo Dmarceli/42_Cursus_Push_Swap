@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pushmoves.c                                        :+:      :+:    :+:   */
+/*   org5dig.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 13:07:28 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/02 13:24:02 by dmarceli         ###   ########.fr       */
+/*   Created: 2022/03/02 13:06:54 by dmarceli          #+#    #+#             */
+/*   Updated: 2022/03/02 13:12:50 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
-void	pa(t_data *data)
+void org5dig(t_data data)
 {
-	if (data->number_count_b < 1)
-		return ;
-	data->number_count_a++;
-	data->number_count_b--;
-	data->stack_a[data->number_count_a - 1]
-		= data->stack_b[data->number_count_b];
-	write(1, "pa\n", 3);
-}
+	pb(&data);
+	pb(&data);
+	org3dig(data);
+	pa(&data);
+	ra(&data, 1);
+	pa(&data);
 
-void	pb(t_data *data)
-{
-	if (data->number_count_a < 1)
-		return ;
-	data->number_count_b++;
-	data->number_count_a--;
-	data->stack_b[data->number_count_b - 1]
-		= data->stack_a[data->number_count_a];
-	write(1, "pb\n", 3);
 }
