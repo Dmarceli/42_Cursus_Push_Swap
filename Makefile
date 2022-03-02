@@ -29,7 +29,7 @@ $(PATH_OBJS)/%.o: $(PATH_SRC)/%.c | $(PATH_BUILD)
 
 $(PATH_BUILD):
 		@mkdir -p $(PATH_BUILD)
-		@mkdir -p $(PATH_OBJS) $(PATH_OBJS_UTILS)
+		@mkdir -p $(PATH_OBJS) 
 
 clean:
 		@printf "\033[38;5;1m[Cleaning objects!]\033[0m\n"

@@ -2,6 +2,8 @@
 
 int main(int argc, char **argv)
 {
+	if (argc < 2)
+		return(0);
 	t_data	data;
 	int		i;
 
@@ -27,14 +29,7 @@ int main(int argc, char **argv)
 	printf("%d    %d\n", data.stack_a[2], data.stack_b[2]);
 	printf("%d    %d\n", data.stack_a[1], data.stack_b[1]);
 	printf("%d    %d\n", data.stack_a[0], data.stack_b[0]);
-	//org3dig(data);
-	pb(&data);
-	pb(&data);
-	sa(&data, 1);
-	ra(&data, 1);
-	pa(&data);
-	ra(&data, 1);
-	pa(&data);
+	org5dig(data);
 
 	printf("%d    %d\n", data.stack_a[4], data.stack_b[4]);
 	printf("%d    %d\n", data.stack_a[3], data.stack_b[3]);

@@ -67,7 +67,7 @@ int	ft_argcheck(int argc, char **argv)
 	int i;
 	i = 1;
 
-	if (argc <= 2)
+	if (argc < 2)
 		return(0);
 	if (!is_intlimits(argv))
 		return(0);

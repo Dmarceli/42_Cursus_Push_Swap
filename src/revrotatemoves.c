@@ -14,7 +14,7 @@ void rra(t_data *data, int printit)
 	}
 	data->stack_a[i] = temp;
 	if(printit == 1)
-		write(1,"rra\n",3);
+		write(1,"rra\n",4);
 }
 
 void rrb(t_data *data, int printit)
@@ -38,5 +38,5 @@ void rrr(t_data *data)
 {
 	ra(data, 0);
 	rb(data, 0);
-	write(1,"rrr\n",3);
+	write(1,"rrr\n",4);
 }

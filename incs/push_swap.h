@@ -34,6 +34,7 @@ void	rrr(t_data *data);
 /////////////////////////////
 
 void	org3dig(t_data data);
+void	org5dig(t_data data);
 
 
 ///////////////////////////////

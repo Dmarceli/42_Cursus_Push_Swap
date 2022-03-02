@@ -19,3 +19,13 @@ void org3dig(t_data data)
 	else
 		rra(&data, 1);
 }
+void org5dig(t_data data)
+{
+	pb(&data);
+	pb(&data);
+	org3dig(data);
+	pa(&data);
+	ra(&data, 1);
+	pa(&data);
+
+}
