@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:06 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/02 16:29:18 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/03 15:07:01 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(int argc, char **argv)
 	t_data	data;
 	int		i;
 
-	data.stack_a = (int *)malloc(sizeof(int) * argc - 1);
+	data.stack_a = ft_calloc(sizeof(int), argc - 1);
 	data.stack_b = ft_calloc(sizeof(int), argc - 1);
 	data.number_count_a = argc - 1;
 	data.number_count_b = 0;
@@ -36,18 +36,15 @@ int	main(int argc, char **argv)
 	}
 	// printf("%d    %d\n", data.stack_a[4], data.stack_b[4]);
 	// printf("%d    %d\n", data.stack_a[3], data.stack_b[3]);
-	// printf("%d    %d\n", data.stack_a[2], data.stack_b[2]);
-	// printf("%d    %d\n", data.stack_a[1], data.stack_b[1]);
-	// printf("%d    %d\n", data.stack_a[0], data.stack_b[0]);
-	//pb(&data);
-	//ra(&data, 1);
-	// if(data.stack_a[0] == 2)
-	// 	pb(&data);
-	//pb(&data);
-	org5dig(data);
+	printf("%d    %d\n", data.stack_a[2], data.stack_b[2]);
+	printf("%d    %d\n", data.stack_a[1], data.stack_b[1]);
+	printf("%d    %d\n", data.stack_a[0], data.stack_b[0]);
+	org3dig(data);
 	// printf("%d    %d\n", data.stack_a[4], data.stack_b[4]);
 	// printf("%d    %d\n", data.stack_a[3], data.stack_b[3]);
-	// printf("%d    %d\n", data.stack_a[2], data.stack_b[2]);
-	// printf("%d    %d\n", data.stack_a[1], data.stack_b[1]);
-	// printf("%d    %d\n", data.stack_a[0], data.stack_b[0]);
+	printf("%d    %d\n", data.stack_a[2], data.stack_b[2]);
+	printf("%d    %d\n", data.stack_a[1], data.stack_b[1]);
+	printf("%d    %d\n", data.stack_a[0], data.stack_b[0]);
+	free(data.stack_a);
+	free(data.stack_b);
 }

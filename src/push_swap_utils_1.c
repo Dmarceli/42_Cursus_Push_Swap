@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 14:19:21 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/02 16:29:52 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/03 14:16:05 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,5 @@ int	find_smallest_nbr(t_data *data)
 			min = tmp[i];
 		i++;
 	}
-	//printf("Smallest element present in given array: %d\n", min);
 	return (min);
 }
