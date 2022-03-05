@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:02 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/02 13:30:48 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/04 23:56:37 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,23 @@ int	is_duplicate(char **argv)
 	return (1);
 }
 
-int	ft_argcheck(int argc, char **argv)
+int	are_arg_sorted(int argc, char**argv)
 {
 	int	i;
 
-	i = 1;
+	i = 0;
+	while (i < argc - 1)
+	{
+		if (argv[i] > argv[i + 1])
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+
+int	ft_argcheck(int argc, char **argv)
+{
 	if (argc < 2)
 		return (0);
 	if (!is_intlimits(argv))
@@ -86,6 +98,8 @@ int	ft_argcheck(int argc, char **argv)
 	if (!is_numeric(argc, argv))
 		return (0);
 	if (!is_duplicate(argv))
+		return (0);
+	if (!are_arg_sorted(argc, argv))
 		return (0);
 	else
 		return (1);

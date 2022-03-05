@@ -1,47 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_utils_1.c                                :+:      :+:    :+:   */
+/*   psdistributor.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 14:19:21 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/04 23:20:19 by dmarceli         ###   ########.fr       */
+/*   Created: 2022/03/04 22:48:48 by dmarceli          #+#    #+#             */
+/*   Updated: 2022/03/04 23:50:44 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
-int	find_smallest_nbr(t_data *data)
+void	algdistributor(t_data data)
 {
-	int	*tmp;
-	int	length;
-	int	i;
-	int	min;
-
-	min = data->stack_a[0];
-	tmp = data->stack_a;
-	length = data->number_count_a ;
-	i = 0;
-	while (i < length)
+	if (data.number_count_a == 2)
 	{
-		if (tmp[i] < min)
-			min = tmp[i];
-		i++;
+		if (is_array_sorted(data) != 1)
+			sa(&data, 1);
 	}
-	return (min);
-}
-
-int	is_array_sorted(t_data data)
-{
-	int	i;
-
-	i = 0;
-	while (i < data.number_count_a - 1)
-	{
-		if (data.stack_a[i] > data.stack_a[i + 1])
-			return (0);
-		i++;
-	}
-	return (1);
+	if (data.number_count_a == 3)
+		org3dig(data);
+	if (data.number_count_a == 4)
+		org4dig(data);
+	if (data.number_count_a == 5)
+		org5dig(data);
 }
