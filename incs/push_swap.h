@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:51 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/04 23:50:12 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/07 17:01:06 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ int					ft_argcheck(int argc, char **argv);
 int					is_sorted(int argread, int *arr);
 int					main(int argc, char **argv);
 int					find_smallest_nbr(t_data *data);
-int					is_array_sorted(t_data data);
+int					is_array_sorted(t_data *data);
 
 #endif

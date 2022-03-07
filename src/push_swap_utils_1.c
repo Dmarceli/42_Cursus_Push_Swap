@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 14:19:21 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/04 23:20:19 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/07 17:02:50 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,17 @@ int	find_smallest_nbr(t_data *data)
 	return (min);
 }
 
-int	is_array_sorted(t_data data)
+int	is_array_sorted(t_data *data)
 {
 	int	i;
 
 	i = 0;
-	while (i < data.number_count_a - 1)
+
+	while (i < data->number_count_a - 1)
 	{
-		if (data.stack_a[i] > data.stack_a[i + 1])
+		if (data->stack_a[i] > data->stack_a[i + 1])
 			return (0);
-		i++;
+		++i;
 	}
 	return (1);
 }

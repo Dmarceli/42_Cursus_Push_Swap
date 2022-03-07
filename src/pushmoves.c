@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:28 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/04 19:22:52 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/07 17:06:52 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	pa(t_data *data)
 		data->stack_b[j] = data->stack_b[j + 1];
 	data->number_count_a++;
 	data->number_count_b--;
-	write(1, "pb\n", 3);
+	write(1, "pa\n", 3);
 }
 
 void	pb(t_data *data)
