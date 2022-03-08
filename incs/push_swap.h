@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:51 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/08 17:53:15 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/08 19:54:30 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_data
 
 typedef struct s_chunk
 {
+	int *temp;
 	int	size;
 	int	max;
 	int	min;
