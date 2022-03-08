@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:02 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/07 17:18:37 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/08 16:14:05 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int	is_numeric(int argc, char **argv)
 	k = 0;
 	while (i < argc)
 	{
-
 		if (argv[i][k] == '-' || argv[i][k] == '+')
 			k++;
 		while (argv[i][k] == ' ')
