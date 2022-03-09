@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 22:48:48 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/08 17:40:25 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/08 23:57:13 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ void	algdistributor(t_data data)
 	if (data.number_count_a == 5)
 		org5dig(data);
 	if (data.number_count_a <= 25)
-		orgbigdig(data, 1);
-	if (data.number_count_a <= 100)
-		orgbigdig(data, 3);
+		orgbigdig(data, 2);
+	else if (data.number_count_a <= 100)
+		orgbigdig(data, 2);
 	else
-		orgbigdig(data, 7);
+		orgbigdig(data, 2);
 }

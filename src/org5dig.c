@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:06:54 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/04 23:47:56 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/08 23:31:10 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,4 @@ void	org4dig(t_data data)
 	org3dig(data);
 	pa(&data);
 }
+

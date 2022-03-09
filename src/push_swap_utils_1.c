@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 14:19:21 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/08 15:46:47 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/08 23:49:41 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,3 +65,31 @@ int	is_array_sorted(t_data *data)
 	}
 	return (1);
 }
+
+void	normalizer(t_data	*data)
+{
+	int	i;
+	int	j;
+	int	*stack;
+	int	n_min;
+
+
+	i = -1;
+	stack = malloc(sizeof(int) * data->number_count_a);
+	while (++i < data->number_count_a)
+	{
+		j = -1;
+		n_min = 1;
+		stack[i] = data->stack_a[i];
+		while (++j < data->number_count_a)
+		{
+			if (stack[i] > data->stack_a[j])
+				n_min++;
+		}
+		stack[i] = n_min;
+	}
+	data->stack_a = stack;
+	if (stack)
+		free(stack);
+}
+

@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:51 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/08 19:54:30 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/09 00:58:44 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ typedef struct s_data
 
 typedef struct s_chunk
 {
-	int *temp;
 	int	size;
 	int	max;
 	int	min;
@@ -63,7 +62,7 @@ void	algdistributor(t_data data);
 void	org3dig(t_data data);
 void	org4dig(t_data data);
 void	org5dig(t_data data);
-// void	orgbigdig(t_data data);
+void	orgbigdig(t_data data, int chunknbr);
 
 ///////////////////////////////
 //           UTILS          //
@@ -84,5 +83,8 @@ int		main(int argc, char **argv);
 int		find_smallest_nbr(t_data *data);
 int		find_biggest_nbr(t_data *data);
 int		is_array_sorted(t_data *data);
+void	insertionsort(int *arr, int n);
+void	normalizer(t_data	*data);
+void	push_it_back(t_data *data, t_chunk *chunks);
 
 #endif

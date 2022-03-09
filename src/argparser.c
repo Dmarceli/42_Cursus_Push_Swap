@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:02 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/08 16:14:05 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/08 22:04:08 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,23 +60,23 @@ int	is_numeric(int argc, char **argv)
 int	is_duplicate(char **argv)
 {
 	int	i;
-	int	k;
+	int	j;
 
 	i = 1;
 	while (argv[i])
 	{
-		k = i + 1;
-		while (argv[k])
+		j = i + 1;
+		while (argv[j])
 		{
-			if (ft_strlen(argv[i]) == ft_strlen(argv[k]))
+			if (ft_strlen(argv[i]) == ft_strlen(argv[j]))
 			{
-				if (ft_strncmp(argv[i], argv[k], ft_strlen(argv[i])) == 0)
+				if (ft_strncmp(argv[i], argv[j], ft_strlen(argv[i])) == 0)
 				{
-					write (1, "\e[0;31mError\n\e[0;30m", 15);
+					write(1, "\033[1;31mError\n[0m", 13);
 					return (0);
-				}	
+				}
 			}
-			k++;
+		j++;
 		}
 		i++;
 	}
@@ -87,11 +87,11 @@ int	ft_argcheck(int argc, char **argv)
 {
 	if (argc < 2)
 		return (0);
+	if (!is_duplicate(argv))
+		return (0);
 	if (!is_intlimits(argv))
 		return (0);
 	if (!is_numeric(argc, argv))
-		return (0);
-	if (!is_duplicate(argv))
 		return (0);
 	else
 		return (1);
