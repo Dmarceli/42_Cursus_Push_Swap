@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:06 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/09 00:48:07 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/09 13:57:26 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,4 @@ int	main(int argc, char **argv)
 	if (data.stack_b)
 		free(data.stack_b);
 }
-
 

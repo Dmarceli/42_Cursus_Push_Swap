@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 14:19:21 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/08 23:49:41 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/09 13:57:37 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ void	normalizer(t_data	*data)
 	int	*stack;
 	int	n_min;
 
-
 	i = -1;
 	stack = malloc(sizeof(int) * data->number_count_a);
 	while (++i < data->number_count_a)
@@ -92,4 +91,3 @@ void	normalizer(t_data	*data)
 	if (stack)
 		free(stack);
 }
-
