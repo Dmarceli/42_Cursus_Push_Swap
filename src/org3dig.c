@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:15 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/03 15:03:46 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/12 18:57:53 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ void	org3dig(t_data data)
 		sa(&data, 1);
 		ra(&data, 1);
 	}
-	else
+	else if (data.stack_a[1] > data.stack_a[0] 
+		&& data.stack_a[1] > data.stack_a[2])
 		rra(&data, 1);
+	else 
+		return ;
 }

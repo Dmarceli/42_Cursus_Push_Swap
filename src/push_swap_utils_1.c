@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 14:19:21 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/09 13:57:37 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/12 20:51:10 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,32 @@ int	find_smallest_nbr(t_data *data)
 	}
 	return (min);
 }
+
+int	find_smallest_nbr_index(t_data *data)
+{
+	int	*tmp;
+	int	ret;
+	int	i;
+	int	min;
+
+	min = data->stack_a[0];
+	tmp = data->stack_a;
+
+	i = 1;
+	ret = i;
+	while (i < data->number_count_a)
+	{
+		if (tmp[i] < min)
+		{
+			min = tmp[i];
+			ret = i;
+		}
+		i++;
+	}
+	return (ret);
+}
+
+
 
 int	find_biggest_nbr(t_data *data)
 {
@@ -88,6 +114,6 @@ void	normalizer(t_data	*data)
 		stack[i] = n_min;
 	}
 	data->stack_a = stack;
-	if (stack)
-		free(stack);
+	// if (stack)
+	// 	free(stack);
 }

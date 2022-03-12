@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:51 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/09 00:58:44 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/12 19:12:58 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,6 @@ int		is_array_sorted(t_data *data);
 void	insertionsort(int *arr, int n);
 void	normalizer(t_data	*data);
 void	push_it_back(t_data *data, t_chunk *chunks);
+int		find_smallest_nbr_index(t_data *data);
 
 #endif

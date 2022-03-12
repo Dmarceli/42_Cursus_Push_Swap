@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:31 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/03 15:13:22 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/12 18:36:13 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ra(t_data *data, int printit)
 	}
 	data->stack_a[i] = temp;
 	if (printit == 1)
-		write(1, "ra\n", 4);
+		write(1, "ra\n", 3);
 }
 
 void	rb(t_data *data, int printit)
@@ -43,12 +43,12 @@ void	rb(t_data *data, int printit)
 	}
 	data->stack_b[i] = temp;
 	if (printit == 1)
-		write(1, "rb\n", 4);
+		write(1, "rb\n", 3);
 }
 
 void	rr(t_data *data)
 {
 	ra(data, 0);
 	rb(data, 0);
-	write(1, "rr\n", 4);
+	write(1, "rr\n", 3);
 }

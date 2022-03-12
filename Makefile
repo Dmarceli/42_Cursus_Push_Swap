@@ -1,7 +1,7 @@
 NAME	:=	push_swap
 
 CC		:=	gcc
-CFLAGS	:= -Wall -Wextra -Werror
+CFLAGS	:= -Wall -Wextra -Werror -g
 
 PATH_SRC		:=	./src
 PATH_INCLUDES	:=	./incs
