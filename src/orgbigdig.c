@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 15:54:49 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/12 20:55:38 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/17 10:38:21 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	push_it_back(t_data *data, t_chunk *chunks)
 			pa(data);
 			chunks->max--;
 		}	
-		else if (data->stack_b[0] == chunks->min)
+		else if (data->stack_b[0] == chunks->min - 1)
 		{
 			pa(data);
 			rra(data, 1);
@@ -52,9 +52,9 @@ void	sorter(t_data data, t_chunk chunks, int chunknbr)
 				ra(&data, 1);
 		}
 		push_it_back(&data, &chunks);
-		chunks.max = chunks.next;
-		chunks.min -= chunks.size + 1;
-		chunks.next = chunks.min - 1;
+		chunks.max = chunks.next + 1;
+		chunks.min = chunks.max - chunks.size;
+		chunks.next = chunks.min;
 		if (chunknbr == 2)
 		{
 			chunks.min = 0;
@@ -68,13 +68,9 @@ void	orgbigdig(t_data data, int chunknbr)
 {
 	t_chunk	chunks;
 
-	//printf("big dig\n");
 	chunks.size = data.number_count_a / chunknbr;
 	chunks.max = data.number_count_a;
 	chunks.min = chunks.max - chunks.size;
 	chunks.next = chunks.min - 1;
-	//normalizer(&data);
 	sorter(data, chunks, chunknbr);
-	// printArray(data.stack_a, data.number_count_a);
-	// printArray(data.stack_b, data.number_count_b);
 }

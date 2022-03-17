@@ -6,22 +6,11 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:28 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/09 00:46:58 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/13 14:12:29 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
-
-// void	pa(t_data *data)
-// {
-// 	if (data->number_count_b < 1)
-// 		return ;
-// 	data->number_count_a++;
-// 	data->number_count_b--;
-// 	data->stack_a[data->number_count_a - 1]
-// 		= data->stack_b[data->number_count_b];
-// 	write(1, "pa\n", 3);
-// }
 
 void	pa(t_data *data)
 {
