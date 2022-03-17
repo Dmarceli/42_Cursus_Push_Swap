@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:51 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/13 14:07:59 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/17 16:02:03 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,7 @@ void	normalizer(t_data	*data);
 void	push_it_back(t_data *data, t_chunk *chunks);
 int		find_smallest_nbr_index(t_data *data);
 int		optimized_path(t_data data);
+int		optimized_path_b(t_data *data, t_chunk *chunks);
+int		find_smallest_nbr_index_b(t_data *data);
 
 #endif

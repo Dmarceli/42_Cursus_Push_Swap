@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 15:54:49 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/17 10:38:21 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/17 16:59:00 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,19 @@ void	push_it_back(t_data *data, t_chunk *chunks)
 			pa(data);
 			chunks->max--;
 		}	
-		else if (data->stack_b[0] == chunks->min - 1)
+		else if (data->stack_b[0] == chunks->min + 1)
 		{
 			pa(data);
-			rra(data, 1);
+			ra(data, 1);
 			chunks->min++;
 		}
 		else
-			rrb(data, 1);
+		{
+			if (optimized_path_b(data, chunks))
+				rrb(data, 1);
+			else
+				rb(data, 1);
+		}
 	}
 }
 
@@ -62,6 +67,8 @@ void	sorter(t_data data, t_chunk chunks, int chunknbr)
 		}
 		chunknbr--;
 	}
+	while (data.stack_a[data.number_count_a - 1] != data.number_count_a)
+		rra(&data, 1);
 }
 
 void	orgbigdig(t_data data, int chunknbr)

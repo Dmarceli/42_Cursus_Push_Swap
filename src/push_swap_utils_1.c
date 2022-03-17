@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 14:19:21 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/13 14:05:10 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/17 14:51:54 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ int	find_smallest_nbr_index(t_data *data)
 
 	min = data->stack_a[0];
 	tmp = data->stack_a;
-
 	i = 1;
 	ret = i;
 	while (i < data->number_count_a)
