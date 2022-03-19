@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 15:54:49 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/17 16:59:00 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/19 10:26:35 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ void	push_it_back(t_data *data, t_chunk *chunks)
 		else
 		{
 			if (optimized_path_b(data, chunks))
-				rrb(data, 1);
-			else
 				rb(data, 1);
+			else
+				rrb(data, 1);
 		}
 	}
 }
