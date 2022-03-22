@@ -1,7 +1,7 @@
 NAME	:=	push_swap
 
 CC		:=	gcc
-CFLAGS	:= -Wall -Wextra -Werror -g
+CFLAGS	:= -Wall -Wextra -Werror -fsanitize=address
 
 PATH_SRC		:=	./src
 PATH_INCLUDES	:=	./incs
@@ -9,7 +9,20 @@ PATH_BUILD		:= ./build
 PATH_OBJS		:= $(PATH_BUILD)/objs
 
 BIN				:=	./$(NAME)
-SRCS			:= $(wildcard $(PATH_SRC)/*.c)
+SRCS			:= $(PATH_SRC)/algdistributor.c \
+					$(PATH_SRC)/argparser.c \
+					$(PATH_SRC)/main.c \
+					$(PATH_SRC)/org3dig.c \
+					$(PATH_SRC)/org5dig.c \
+					$(PATH_SRC)/orgbigdig.c \
+					$(PATH_SRC)/push_swap_utils.c \
+					$(PATH_SRC)/push_swap_utils_1.c \
+					$(PATH_SRC)/push_swap_utils_2.c \
+					$(PATH_SRC)/pushmoves.c \
+					$(PATH_SRC)/revrotatemoves.c \
+					$(PATH_SRC)/rotatemoves.c \
+					$(PATH_SRC)/swapmoves.c \
+
 OBJ				:= $(subst .c,.o,$(subst $(PATH_SRC), $(PATH_OBJS), $(SRCS)))
 
 all:$(BIN)

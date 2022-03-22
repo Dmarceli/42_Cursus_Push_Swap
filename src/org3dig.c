@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:15 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/13 14:07:05 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/22 15:22:16 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,13 @@ void	org3dig(t_data data)
 		&& data.stack_a[2] < data.stack_a[0])
 		ra(&data, 1);
 	else if (data.stack_a[0] < data.stack_a[1]
-		&& data.stack_a[1] > data.stack_a[2] 
+		&& data.stack_a[1] > data.stack_a[2]
 		&& data.stack_a[2] > data.stack_a[0])
 	{
 		sa(&data, 1);
 		ra(&data, 1);
 	}
-	else if (data.stack_a[1] > data.stack_a[0] 
+	else if (data.stack_a[1] > data.stack_a[0]
 		&& data.stack_a[1] > data.stack_a[2])
 		rra(&data, 1);
-	else
-		return ;
 }

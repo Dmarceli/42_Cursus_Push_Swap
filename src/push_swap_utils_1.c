@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 14:19:21 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/17 14:51:54 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/22 16:28:56 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,4 @@ void	normalizer(t_data	*data)
 		stack[i] = n_min;
 	}
 	data->stack_a = stack;
-	// if (stack)
-	// 	free(stack);
 }

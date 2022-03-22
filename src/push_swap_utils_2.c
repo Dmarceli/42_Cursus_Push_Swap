@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:16:19 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/17 16:09:35 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/22 14:40:48 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	optimized_path(t_data data)
 		return (0);
 }
 
-int	optimized_path_b(t_data *data, t_chunk *chunks)
+int	optimized_rotation_b(t_data *data, t_chunk *chunks)
 {
 	int	small_ind;
 

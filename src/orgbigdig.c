@@ -6,18 +6,27 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 15:54:49 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/19 10:26:35 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/22 16:25:19 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
-void printArray(int arr[], int n)
+void	move_b(t_data *data, t_chunk *chunks)
 {
-    int i;
-    for (i = 0; i < n; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
+	if (data->stack_b[0] == chunks->max - 1
+		&& data->stack_b && data->stack_a[1] == chunks->max)
+		sb(data, 1);
+	else if (data->stack_b[0] == chunks->min + 2
+		&& data->stack_b && data->stack_a[1] == chunks->min + 1)
+		sb(data, 1);
+	else
+	{
+		if (optimized_rotation_b(data, chunks))
+			rb(data, 1);
+		else
+			rrb(data, 1);
+	}
 }
 
 void	push_it_back(t_data *data, t_chunk *chunks)
@@ -36,12 +45,7 @@ void	push_it_back(t_data *data, t_chunk *chunks)
 			chunks->min++;
 		}
 		else
-		{
-			if (optimized_path_b(data, chunks))
-				rb(data, 1);
-			else
-				rrb(data, 1);
-		}
+			move_b(data, chunks);
 	}
 }
 

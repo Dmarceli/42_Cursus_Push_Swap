@@ -6,7 +6,7 @@
 /*   By: dmarceli <dmarceli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:07:51 by dmarceli          #+#    #+#             */
-/*   Updated: 2022/03/19 10:24:12 by dmarceli         ###   ########.fr       */
+/*   Updated: 2022/03/22 14:41:15 by dmarceli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void	pa(t_data *data);
 void	pb(t_data *data);
 void	rb(t_data *data, int print);
 void	ra(t_data *data, int print);
+void	rr(t_data *data);
 void	rra(t_data *data, int print);
 void	rrb(t_data *data, int print);
 void	rrr(t_data *data);
@@ -63,6 +64,7 @@ void	org3dig(t_data data);
 void	org4dig(t_data data);
 void	org5dig(t_data data);
 void	orgbigdig(t_data data, int chunknbr);
+void	move_b(t_data *data, t_chunk *chunks);
 
 ///////////////////////////////
 //           UTILS          //
@@ -88,7 +90,7 @@ void	normalizer(t_data	*data);
 void	push_it_back(t_data *data, t_chunk *chunks);
 int		find_smallest_nbr_index(t_data *data);
 int		optimized_path(t_data data);
-int		optimized_path_b(t_data *data, t_chunk *chunks);
+int		optimized_rotation_b(t_data *data, t_chunk *chunks);
 int		find_smallest_nbr_index_b(t_data *data);
 
 #endif
